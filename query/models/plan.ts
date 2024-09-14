@@ -3,7 +3,7 @@ import { Database, Tables } from "../database.types";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from 'next/navigation'
 
-type Plan = CamelCasedPropertiesDeep<Database["public"]['Tables']["plans"]["Row"]>;
+type Plan = CamelCasedPropertiesDeep<Database["public"]['Tables']["plans"]["Row"]>; // HACK
 
 export async function getPlan(planId: string): Promise<Plan | null> {
   const supabase = createClient();
