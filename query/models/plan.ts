@@ -23,7 +23,7 @@ export async function getPlan(planId: string): Promise<Plan | null> {
     return null;
   }
 
-  return data == null ? null : {
+  return {
     id: plan.id,
     name: plan.name,
     userId: plan.user_id,
