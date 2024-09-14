@@ -2,10 +2,11 @@
   "private": true,
   "scripts": {
     "dev": "supabase start && next dev",
+    "build": "next build",
+    "start": "next start",
     "migration:new": "supabase migration new",
     "migration:up": "supabase migration up --local",
-    "build": "next build",
-    "start": "next start"
+    "generate": "npx supabase gen types --lang=typescript --local --schema public > query/database.types.ts"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.1",
