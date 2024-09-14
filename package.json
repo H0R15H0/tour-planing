@@ -2,6 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "supabase start && next dev",
+    "migration:new": "supabase migration new",
+    "migration:up": "supabase migration up --local",
     "build": "next build",
     "start": "next start"
   },
